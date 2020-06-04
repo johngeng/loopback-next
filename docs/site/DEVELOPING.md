@@ -326,6 +326,8 @@ List of packages that are considered as building blocks:
 - [packages/openapi-v3](https://github.com/strongloop/loopback-next/tree/master/packages/openapi-v3]
 - [packages/repository-json-schema](https://github.com/strongloop/loopback-next/tree/master/packages/repository-json-schema]
 
+Packages not listed above are considered as framework-level.
+
 ### Publishing changes
 
 To prevent documentation changes going live before the changes in the
