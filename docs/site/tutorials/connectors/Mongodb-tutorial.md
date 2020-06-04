@@ -151,7 +151,24 @@ export class UserRepository extends DefaultCrudRepository<
 ### 5. Create endpoints and view data using API Explorer
 
 Once we built a [controller](../../Controllers.md) with `lb4 controller` to
-handle requests, from the project root, start the app:
+handle requests:
+
+```bash
+$ lb4 controller
+? Controller class name: user
+Controller User will be created in src/controllers/user.controller.ts
+
+? What kind of controller would you like to generate? REST Controller with CRUD
+functions
+? What is the name of the model to use with this CRUD repository? User
+? What is the name of your CRUD repository? UserRepository
+? What is the name of ID property? id
+? What is the type of your ID? number
+? Is the id omitted when creating a new instance? Yes    <-- id will be auto-generated
+? What is the base HTTP path name of the CRUD operations? /users
+```
+
+From the project root, start the app:
 
 ```bash
 $ npm start
