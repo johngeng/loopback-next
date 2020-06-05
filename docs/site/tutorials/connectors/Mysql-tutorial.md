@@ -208,11 +208,22 @@ We can verify what we just created with API Explorer
 
 ## Database Migration
 
+As we showed in the previous steps,
 [Database migration](../../Database-migrations.md) helps you create relational
-database schemas based on definitions of your models. Besides the basic model
-metadata, you can also specify part of the database schema definition via the
-property definition, which would be mapped to the database. See
-[Data Mapping Properties](https://loopback.io/doc/en/lb4/Model.html#data-mapping-properties).
+database schemas based on definitions of your models. Here are some tips:
+
+- if you make further changes to models, make sure to run `npm run build` before
+  running the migrate script again
+- `npm run migrate` alters existing tables for you. If you'd like to drop any
+  existing schemas, you can do `npm run migrate -- --rebuild`. But notice that
+  all the data will be lost.
+
+Please check [Database migration](../../Database-migrations.md) for details.
+
+Besides the basic model metadata, you can also specify part of the database
+schema definition via the property definition, which would be mapped to the
+database. See
+[Data Mapping Properties](https://loopback.io/doc/en/lb4/MySQL-connector.html#data-mapping-properties).
 
 ## Model Discover
 
@@ -295,5 +306,5 @@ export class User extends Entity {
 
 The field `mysql.<property>` maps to the database definition of a table/column.
 See
-[Data Mapping Properties](https://loopback.io/doc/en/lb4/Model.html#data-mapping-properties)
+[Data Mapping Properties](https://loopback.io/doc/en/lb4/MySQL-connector.html#data-mapping-properties)
 for details.
